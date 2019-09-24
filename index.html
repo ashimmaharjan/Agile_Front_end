@@ -78,7 +78,7 @@
                     <a class="nav-link text-dark" href="login.html"><b>Login</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="register.html"><b>Register</b></a>
+                    <a class="nav-link text-dark" href="auction_register.html"><b>Register</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="aboutUs.html"><b>About Us</b></a>
@@ -153,10 +153,13 @@
         <section class="container py-5 btn-light">
             <div id="demo" class="carousel slide" data-ride="carousel">
 
+
+
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="row">
+                        <div id="latestauc"></div>
+                        <!-- <div class="row">
                             <div class="col-sm-3 px-2">
                                 <div class="box-shadow">
                                     <figure class="img-fit">
@@ -230,29 +233,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-sm-3 px-2">
-                                <div class="box-shadow">
-                                    <figure class="img-fit">
-                                        <img src="images/4109-antique-lamp-500x500.jpg" alt="One">
-                                    </figure>
-                                    <div class="py-1 px-2">
-                                        <h5 class="text-center">Antique Aladin Lamp</h5>
-                                        <div class="d-flex justify-content-between">
-                                            <span>Price: <b>Rs. 90,000</b></span>
-                                            <span>Antique</span>
-                                        </div>
-                                        <p>
-                                            <button class="btn btn-danger" id="join" name="updateProfile" tabindex="13">
-                                                Join Bid <i class="fas fa-sign-in-alt"></i></button>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 px-2">
+                        <!-- <div class="row"> -->
+                        <div id="latestauc2"></div>
+                        <!-- <div class="col-sm-3 px-2" >
+
+                            </div> -->
+                        <!-- <div class="col-sm-3 px-2">
                                 <div class="box-shadow">
                                     <figure class="img-fit">
                                         <img src="images/antique_clock.jpg" alt="One">
@@ -307,8 +296,8 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> -->
+                        <!-- </div> -->
                     </div>
                 </div>
 
@@ -326,6 +315,7 @@
 
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js"></script>
     <!--===============================================================================================-->
     <script src="vendor/bootstrap/js/popper.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>

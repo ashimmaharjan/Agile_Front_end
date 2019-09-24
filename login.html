@@ -58,8 +58,16 @@
                         localStorage.setItem('token', res.token);
                         console.log(data);
                         if (res.token != null) {
-                            alert("Login Successful");
-                            location.href = "userDashboard.html";
+                            if (username == "ashim7") {
+                                alert("Login Successful");
+                                location.href = "admin_dashboard.html";
+                                localStorage.setItem("admin", "admin");
+                            }
+                            else {
+                                alert("Login Successful");
+
+                                location.href = "userDashboard.html";
+                            }
                         }
                         else {
                             alert("Invalid username or password");

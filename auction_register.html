@@ -35,6 +35,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/auction_register.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
@@ -86,7 +87,7 @@
                     <img src="images/iBid_logo.png" alt="IMG">
                 </div>
 
-                <form class="form register">
+                <form class="form register" enctype="multipart/form-data" method="POST">
                     <span class="login100-form-title">
                         Register Auction
                     </span>
@@ -101,8 +102,14 @@
                     </div>
 
                     <div class="wrap-input100">
+                        <label for="product_image" class="mr-sm-2">Image of product:</label>
+                        <input type="file" class="form-control mb-2 mr-sm-2" id="auctionImgname" name="auctionImgname"
+                            required tabindex="2">
+                    </div>
+
+                    <div class="wrap-input100">
                         <input class="input100" type="text" name="shippingCost" id="shippingCost"
-                            placeholder="Shipping Cost" required tabindex="2">
+                            placeholder="Shipping Cost" required tabindex="3">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-dollar-sign" aria-hidden="true"></i>
@@ -112,7 +119,7 @@
 
                     <div class="wrap-input100">
                         <input class="input100" type="text" name="country" id="country" placeholder="Country" required
-                            tabindex="3">
+                            tabindex="4">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-globe" aria-hidden="true"></i>
@@ -122,7 +129,7 @@
                     <div class="wrap-input100">
                         <label for="auctionType" class="mr-sm-2 lead"> Auction Type
                             <i class="fas fa-font"></i></label>
-                        <select id="type" class="form-control mb-2 mr-sm-2" name="type" tabindex="4" required>
+                        <select id="type" class="form-control mb-2 mr-sm-2" name="type" tabindex="5" required>
                             <option value="Coins">Coins</option>
                             <option value="Books">Books</option>
                             <option value="Electronics">Electronics</option>
@@ -133,7 +140,7 @@
                     <div class="wrap-input100">
                         <label for="condition" class="mr-sm-2 lead"> Condition
                             <i class="fas fa-cogs"></i></label>
-                        <select id="condition" class="form-control mb-2 mr-sm-2" name="condition" tabindex="5" required>
+                        <select id="condition" class="form-control mb-2 mr-sm-2" name="condition" tabindex="6" required>
                             <option value="Old">Old</option>
                             <option value="Used">Used</option>
                             <option value="New">New</option>
@@ -141,21 +148,14 @@
                     </div>
 
                     <div class="wrap-input100">
-                        <label for="year" class="mr-sm-2">Auction Date
+                        <label for="year" class="mr-sm-2">Manufactured Year
                             <i class="fas fa-calendar-alt"></i>
-                            <input type="date" class="form-control mb-2 mr-sm-2" name="auctionDate" id="auctionDate"
-                                tabindex="6" required>
+                            <input type="text" class="form-control mb-2 mr-sm-2" name="manufacturedyear" id="year"
+                                tabindex="7" required>
                         </label>
                     </div>
-
-                    <div class="wrap-input100">
-                        <label for="product_image" class="mr-sm-2">Image of product:</label>
-                        <input type="file" class="form-control mb-2 mr-sm-2" id="productImageName"
-                            name="productImageName" required tabindex="7">
-                    </div>
-
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn" id="login" name="login" tabindex="8">
+                        <button class="login100-form-btn" id="registerauc" name="auctionRegister" tabindex="8">
                             Register
                         </button>
                     </div>
@@ -166,6 +166,7 @@
     </div>
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
     <!--===============================================================================================-->
     <script src="vendor/bootstrap/js/popper.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
